@@ -10,6 +10,6 @@ public class VersionController {
 
     @RequestMapping(method = RequestMethod.GET, value = "/version")
     public ResponseEntity<String> getVersion() {
-        return ResponseEntity.ok("v1!");
+        return ResponseEntity.ok("v2!");
     }
 }
