@@ -35,7 +35,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           port: ${{ secrets.REMOTE_PORT }}
           source: "build/libs/demo-0.0.1-SNAPSHOT.jar"
-          target: "."
+          target: "spring"
 
       - name: restart spring project
         uses: appleboy/ssh-action@v1.0.3
@@ -48,5 +48,3 @@ jobs:
             rm -rf /home/ubuntu/test_shell
             git clone https://github.com/yunseul-dev/test_shell.git
             bash /home/ubuntu/test_shell/deployment.sh
-
-
